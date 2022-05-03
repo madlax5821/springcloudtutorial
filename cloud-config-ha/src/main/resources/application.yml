@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: cloud-config
+  profiles:
+    active: config2
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/madlax5821/cloud-config
+          search-paths: /**
+          default-label: main
+      enabled: true
+      label: main
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+---
+spring:
+  profiles: config1
+server:
+  port: 7003
+encrypt:
+  key: "xiaofeifei"
+---
+
+spring:
+  profiles: config2
+server:
+  port: 7004
+encrypt:
+  key: "xiaofeifei"

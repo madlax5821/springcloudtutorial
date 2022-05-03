@@ -1,0 +1,147 @@
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # lower case or upper case, default is upper case
+          lower-case-service-id: true
+          # determine if proactively find other services and then register
+          #enabled: true
+      # the default filters applies the strategies to all the routes
+      default-filters:
+        #- AddRequestHeader=test-request-header, gatewayRequest
+        #- AddResponseHeader=test-response-header, gatewayResponse
+      routes:
+        #- id: fallback-forward
+        #  serviceId: user-provider
+        #  uri: lb://user-provider
+        #  predicates:
+        #    - Path=/error/fallbackCircuitBreaker
+        #  filters:
+        #    - name: FallbackHeaders
+        - id: testForCircuitBreaker
+          serviceId: user-provider
+          uri: lb://user-provider
+          predicates:
+            - Path=/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: testBreaker
+                fallbackUri: forward:/error/fallbackCircuitBreaker
+        - id: test
+          serviceId: user-provider
+          uri: lb://user-provider
+          predicates:
+            - Path=/users/** # priority 1
+            #- Path=/users/{dynamic value} this pattern can dynamically add content in request header with the {seg} value
+          filters:
+        # Filters:
+            - AddRequestHeader=x-request-id, 99999 #-{dynamic value}
+            - AddRequestHeader=x-request-author, xiaofeifei #-{dynamic value}
+            # in this tutorial, set request command will cover the add request command
+            - SetRequestHeader=x-request-id, 88888 #-{dynamic value}
+            - SetRequestHeader=x-request-author, mueimuei #-{dynamic value}
+            # removeRequestHeader, the x-request-id will be removed
+            - RemoveRequestHeader=x-request-id
+            # mapRequestHeader, it will search the value of the "from header", and then map the value in "to header"
+            # which just created. If there is no "from header", the "to header" will not be made neither. If there
+            # is already a "to header" before request, it will append the value of "from header" behind its original value
+            - MapRequestHeader=x-request-author,destination-header
+            # preserve the original host header information, default open, no need to configure
+            - PreserveHostHeader
+            # add request parameter, remove request parameter
+            - AddRequestParameter=param-id, 888 #-{dynamic value}
+            - AddRequestParameter=param-name, xiaofeifei #-{dynamic value}
+            - RemoveRequestParameter=param-id
+            # add response header, set response header, remove response header
+            - AddResponseHeader=res-id, 888888 #-{dynamic value}
+            - AddResponseHeader=res-id, 555555 #-{dynamic value}
+            - AddResponseHeader=res-id, 888888 #-{dynamic value}
+            - AddResponseHeader=res-author, xiaofeifei #-{dynamic value}
+            - SetResponseHeader=res-id, 66666 #-{dynamic value}
+            - RemoveResponseHeader=res-author
+            # rewrite response header: replace a defined section of the value
+            #- RewriteResponseHeader={header name},{specific section in header value: password=[正则]},{password=***}
+            # dedupe response header: delete the duplicated headers, RETAIN_FIRST(default), RETAIN_LAST, RETAIN_UNIQUE
+            - DedupeResponseHeader=res-id, RETAIN_FIRST
+            # path filter: prefix path
+            - PrefixPath=/prefix # will add the prefix uri in front of our pre-defined url and call method there, priority 3
+            # redirect route to,
+            #- RedirectTo=302(let all the pre-defined endpoints return 300 error codes and then re-route), www.baidu.com
+            # set http status/code, be aware of only apply to the http status, not affect the return body
+            #- SetStatus=404
+            #- SetStatus=NOT_FOUND
+            # rewrite path expose a pre-defined endpoint to clients but redirect to the url we want internally
+            # if segment is users/{id}, the req will re-direct /prefix/users/id. PS: must follow the rule of Path predicate
+            - RewritePath=/users/test/(?<segment>/?.*), /users/$\{segment} # priority 2
+            - RewritePath=/users/test/getHeader, /users/getHeader
+            # strip prefix filter, we define how many prefixes we will strip, priority 4
+            # /users/123 -> /users/123, because we have prefixPath filter in our instance, so the real path will be applied
+            # prefix first. In this instance the urls are /prefix/users/123, then after striping one, that will be /users/123
+            - StripPrefix=1
+            # special filters, customize the different requirements in args section
+            - name: RequestSize # regulate the upload file size
+            #- name: Retry # retry strategy when access failed
+            #- name: SaveSession # utilize spring session and redis for cache purpose
+            #- name: RemoveHopByHopHeadersFilter # automatically delete some default headers in request, can be configured in
+            # spring.cloud.gateway.filter.remove-non-proxy-headers.headers
+            #- name: SecureHeadersFilter # automatically add some default headers in response, can be configured in
+            # spring.cloud.gateway.filter.secure-headers
+              args:
+                maxSize: 1000 # request size filter
+                reties: 3
+                series:
+                  - SERVER_ERROR
+                statuses:
+                  - BAD_GATEWAY
+                  - METHOD_NOT_ALLOWED
+                methods:
+                  - GET
+                  - POST
+                exceptions:
+                  - java.io.IOException
+                  - java.util.concurrent.TimeoutException
+                backoff:
+                  firstBackOff:
+
+        # Predicates:
+            #- Path=/users/**
+            # determine method matching, one and only one method applied here.
+            #- Method=GET
+            # determine param name matching. for the instance below, only accept the request with parameter id: /getId?id=123
+            # one step further, can accept 正则表达式 with the instance below: /user?name=xiaofeifei88888
+            #- Query=id
+            #- Query=name, xiaofeifei.*
+            # determine if match the variables in cookies， cookie cannot be empty or return false, must have both variable name and 正则
+            #- Cookie=name, xiaofeifei.*
+            # header matching: key=regId, value=9090+正则
+            #- Header=regId, 9090\d+
+            # host matching: host=www.baidu.com
+            #- Host=www.baidu.com, **.baidu.com,
+            # remote IP address matching: IPV4/子网掩码 IPV6/子网掩码
+            #- RemoteAddr=192.168.1.183/0
+            # predicate Weight regulate we need multiple uris within one group and then provide each of them a weight value
+            #- Weight=group1,8  means in group 1, 80% route provided to this uri
+            #- Weight=group1,2  means in group 1, 20% route provided to this uri
+            # timing predicates Before, After and Between
+            #- After= (specific date format) can only route after this time point
+            #- before= (specific date format) can only route before this time point
+            #- Between= (specific date format),(specific date format) can only route during the two time points
+
+
+server:
+  port: 6002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

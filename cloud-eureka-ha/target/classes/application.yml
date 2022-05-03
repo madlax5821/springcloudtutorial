@@ -1,0 +1,57 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, beans, env, metrics, configprops, heapdump, mappings, flyway
+spring:
+  profiles:
+    active: peer3
+
+
+---
+
+server:
+  port: 10110
+spring:
+  profiles: peer1
+  application:
+    name: eureka-ha
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: peer1
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://peer2:10111/eureka/, http://peer3:10112/eureka/
+
+---
+server:
+  port: 10111
+spring:
+  profiles: peer2
+  application:
+    name: eureka-ha
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: peer2
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://peer1:10110/eureka/, http://peer3:10112/eureka/
+---
+server:
+  port: 10112
+spring:
+  profiles: peer3
+  application:
+    name: eureka-ha
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: peer3
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://peer1:10110/eureka/, http://peer2:10111/eureka/

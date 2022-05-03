@@ -1,0 +1,32 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  application:
+    name: user-loadBalancer-consumer
+  profiles:
+    active: consumer-9004
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka/
+---
+
+spring:
+  profiles: consumer-9002
+server:
+  port: 9002
+
+---
+spring:
+  profiles: consumer-9003
+server:
+  port: 9003
+
+---
+spring:
+  profiles: consumer-9004
+server:
+  port: 9004

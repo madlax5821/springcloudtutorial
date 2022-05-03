@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94a6805e-5641-40fb-8e92-7750b9c8b5b0" name="Changes" comment="modify port">
+      <change beforePath="$PROJECT_DIR$/cloud-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-config/src/main/java/com/xiaofei/li/cloudconfig/CloudConfigApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-config/src/main/java/com/xiaofei/li/cloudconfig/CloudConfigApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-config/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/cloud-config" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="281WX0sDRBcrN4FdvyhoLW8FMB5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8.0.311" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cloud-gateway-6002/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\madlax\IdeaProjects\cloud-specification\cloud-gateway-6002\src\main\resources" />
+      <recent name="C:\Users\madlax\IdeaProjects\cloud-specification\cloud-config\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CloudGateway6002Application">
+    <configuration name="CloudConsulProvider9998Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.cloudconsulprovider9998.CloudConsulProvider9998Application" />
+      <module name="cloud-consul-provider-9998" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.cloudconsulprovider9998.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCallApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaofei.li.testcall.TestCallApplication" />
+      <module name="testCall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaofei.li.testcall.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserConsumerLoadBalancer9002Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaofei.li.userconsumerloadbalancer9002.UserConsumerLoadBalancer9002Application" />
+      <module name="user-consumer-loadBalancer-9002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaofei.li.userconsumerloadbalancer9002.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudconfig.CloudConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudConfigClient7002Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-config-client-7002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudconfigclient7002.CloudConfigClient7002Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudConfigHaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="cloud-config-ha" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudconfigha.CloudConfigHaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudConsulConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consul-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudconsulconfig.CloudConsulConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudConsulConsumer9997Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consul-consumer-9997" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudconsulconsumer9997.CloudConsulConsumer9997Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudConsulProvider9998Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consul-provider-9998" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.cloudconsulprovider9998.CloudConsulProvider9998Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudConsulProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-consul-provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudconsulprovider.CloudConsulProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudEureka6001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-eureka-6001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudeureka6001.CloudEureka6001Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudEurekaHaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="cloud-eureka-ha" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudeurekaha.CloudEurekaHaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudGateway6002Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-gateway-6002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.cloudgateway6002.CloudGateway6002Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCallApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.testcall.TestCallApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserConsumer9001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-consumer-9001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.userconsumer9001.UserConsumer9001Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserConsumerFeign10110Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-consumer-feign-10110" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.userconsumerfeign10110.UserConsumerFeign10110Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserConsumerLoadBalancer9002Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="user-consumer-loadBalancer-9002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.userconsumerloadbalancer9002.UserConsumerLoadBalancer9002Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserConsumerResilience4j10210Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-consumer-resilience4j-10210" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.userconsumerresilience4j10210.UserConsumerResilience4j10210Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserProvider8001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="user-provider-8001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofei.li.userprovider8001.UserProvider8001Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.UserConsumerLoadBalancer9002Application" />
+      <item itemvalue="Application.TestCallApplication" />
+      <item itemvalue="Application.CloudConsulProvider9998Application" />
+      <item itemvalue="Spring Boot.CloudEureka6001Application" />
+      <item itemvalue="Spring Boot.UserConsumer9001Application" />
+      <item itemvalue="Spring Boot.UserProvider8001Application" />
+      <item itemvalue="Spring Boot.CloudEurekaHaApplication" />
+      <item itemvalue="Spring Boot.UserConsumerLoadBalancer9002Application" />
+      <item itemvalue="Spring Boot.UserConsumerFeign10110Application" />
+      <item itemvalue="Spring Boot.UserConsumerResilience4j10210Application" />
+      <item itemvalue="Spring Boot.TestCallApplication" />
+      <item itemvalue="Spring Boot.CloudConfigApplication" />
+      <item itemvalue="Spring Boot.CloudConfigClient7002Application" />
+      <item itemvalue="Spring Boot.CloudConfigHaApplication" />
+      <item itemvalue="Spring Boot.CloudConsulProviderApplication" />
+      <item itemvalue="Spring Boot.CloudConsulProvider9998Application" />
+      <item itemvalue="Spring Boot.CloudConsulConsumer9997Application" />
+      <item itemvalue="Spring Boot.CloudConsulConfigApplication" />
+      <item itemvalue="Spring Boot.CloudGateway6002Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UserConsumerLoadBalancer9002Application" />
+        <item itemvalue="Application.CloudConsulProvider9998Application" />
+        <item itemvalue="Application.TestCallApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94a6805e-5641-40fb-8e92-7750b9c8b5b0" name="Changes" comment="" />
+      <created>1650384618195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650384618195</updated>
+      <workItem from="1650384619338" duration="26573000" />
+      <workItem from="1650468213071" duration="13644000" />
+      <workItem from="1650504109506" duration="10402000" />
+      <workItem from="1650550519925" duration="23317000" />
+      <workItem from="1650641746249" duration="13689000" />
+      <workItem from="1650687310170" duration="104000" />
+      <workItem from="1650980425642" duration="25465000" />
+      <workItem from="1651068217099" duration="2475000" />
+      <workItem from="1651113563848" duration="980000" />
+      <workItem from="1651266366476" duration="18100000" />
+      <workItem from="1651339885911" duration="16337000" />
+      <workItem from="1651503800807" duration="29537000" />
+    </task>
+    <task id="LOCAL-00001" summary="modify port">
+      <created>1650981257753</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650981257753</updated>
+    </task>
+    <task id="LOCAL-00002" summary="modify port">
+      <created>1650982041207</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650982041207</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/cloud-config" />
+    </ignored-roots>
+    <MESSAGE value="modify port" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify port" />
+  </component>
+</project>

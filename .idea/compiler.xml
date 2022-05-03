@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-config" />
+        <module name="cloud-eureka-6001" />
+        <module name="user-consumer-resilience4j-10210" />
+        <module name="user-consumer-9001" />
+        <module name="user-consumer-loadBalancer-9002" />
+        <module name="user-consumer-feign-10110" />
+        <module name="cloud-consul-config" />
+        <module name="testCall" />
+        <module name="cloud-eureka-ha" />
+        <module name="cloud-consul-provider-9998" />
+        <module name="cloud-consul-consumer-9997" />
+        <module name="user-provider-8001" />
+        <module name="cloud-config-client-7002" />
+        <module name="cloud-gateway-6002" />
+        <module name="cloud-config-ha" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-config" target="1.8" />
+      <module name="cloud-config-client-7002" target="1.8" />
+      <module name="cloud-config-ha" target="1.8" />
+      <module name="cloud-consul-config" target="1.8" />
+      <module name="cloud-consul-consumer-9997" target="1.8" />
+      <module name="cloud-consul-provider" target="1.8" />
+      <module name="cloud-consul-provider-9998" target="1.8" />
+      <module name="cloud-eureka-6001" target="1.8" />
+      <module name="cloud-eureka-ha" target="1.8" />
+      <module name="cloud-gateway-6002" target="1.8" />
+      <module name="cloud-resilience4J" target="1.8" />
+      <module name="cloud-specification" target="1.8" />
+      <module name="testCall" target="1.8" />
+      <module name="user-consumer-9001" target="1.8" />
+      <module name="user-consumer-feign-10110" target="1.8" />
+      <module name="user-consumer-loadBalancer-9002" target="1.8" />
+      <module name="user-consumer-resilience4j-10210" target="1.8" />
+      <module name="user-provider-8001" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-config" options="-parameters" />
+      <module name="cloud-config-client-7002" options="-parameters" />
+      <module name="cloud-config-ha" options="-parameters" />
+      <module name="cloud-consul-config" options="-parameters" />
+      <module name="cloud-consul-consumer-9997" options="-parameters" />
+      <module name="cloud-consul-provider" options="-parameters" />
+      <module name="cloud-consul-provider-9998" options="-parameters" />
+      <module name="cloud-eureka-6001" options="-parameters" />
+      <module name="cloud-eureka-ha" options="-parameters" />
+      <module name="cloud-gateway-6002" options="-parameters" />
+      <module name="cloud-resilience4J" options="-parameters" />
+      <module name="cloud-specification" options="-parameters" />
+      <module name="testCall" options="-parameters" />
+      <module name="user-consumer-9001" options="-parameters" />
+      <module name="user-consumer-feign-10110" options="-parameters" />
+      <module name="user-consumer-loadBalancer-9002" options="-parameters" />
+      <module name="user-consumer-resilience4j-10210" options="-parameters" />
+      <module name="user-provider-8001" options="-parameters" />
+    </option>
+  </component>
+</project>

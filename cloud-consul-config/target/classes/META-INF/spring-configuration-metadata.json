@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "student",
+      "type": "com.xiaofei.li.entity.StudentConfig",
+      "sourceType": "com.xiaofei.li.entity.StudentConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "student.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.xiaofei.li.entity.StudentConfig"
+    },
+    {
+      "name": "student.gender",
+      "type": "java.lang.String",
+      "sourceType": "com.xiaofei.li.entity.StudentConfig"
+    },
+    {
+      "name": "student.name",
+      "type": "java.lang.String",
+      "sourceType": "com.xiaofei.li.entity.StudentConfig"
+    }
+  ],
+  "hints": []
+}

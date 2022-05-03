@@ -1,0 +1,17 @@
+server:
+  port: 10110
+spring:
+  application:
+    name: user-consumer-feign
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka/
+feign:
+  # regulate if feign compress the response data, default false.
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml, application/xml, application/json
+      min-request-size: 2048

@@ -1,0 +1,78 @@
+spring:
+  application:
+    name: user-provider
+  profiles:
+    active: provider-8001
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #defaultZone: http://xiaofeifei:123@localhost:6001/eureka/
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka/
+    # how often to fetch the registry information from register center, default 30s
+    registry-fetch-interval-seconds: 30
+    # how often to replicate instance information to register center, default 30s
+    instance-info-replication-interval-seconds: 30
+    # how often to poll for changes from Eureka server, default 5 min
+    eureka-service-url-poll-interval-seconds: 300
+    # initially replicate instance to eureka server, default 40s
+    initial-instance-info-replication-interval-seconds: 40
+    # the content fetched from eureka server is compressed for optimum performance and avoid internet traffic.
+    g-zip-content: true
+    # connection timeout, default 5s
+    eureka-server-connect-timeout-seconds: 5
+    # read timeout, default 5s
+    eureka-server-read-timeout-seconds: 8
+    # total number of connections that is allowed from eureka client to all eureka servers, default 200
+    eureka-server-total-connections: 200
+    # total number of connections that is allowed from eureka client to a single eureka server host, default 50
+    eureka-server-total-connections-per-host: 50
+    # thread pool size, default 2
+    heartbeat-executor-thread-pool-size: 2
+    # retry delay for heartbeat executor, default 10 times
+    heartbeat-executor-exponential-back-off-bound: 10
+    # cache pool size, default 2
+    cache-refresh-executor-thread-pool-size: 2
+    # retry delay for cache refresh executor, default 10 times
+    cache-refresh-executor-exponential-back-off-bound: 10
+  instance:
+    prefer-ip-address: true
+    # instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+    # can be utilized to transfer data to another microservices, key-value pair.
+    metadata-map:
+      key: xiaofeifei's key
+      value: xiaofeifei's value
+    # heart beats: to send msg to eureka server to determine if the client instance still alive, default 30s
+    lease-renewal-interval-in-seconds: 30
+    # the time eureka server wait until the last time received the heartbeats before remove it, default 90s
+    lease-expiration-duration-in-seconds: 90
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+# faulty tolerance config
+
+---
+
+server:
+  port: 8003
+spring:
+  profiles: provider-8003
+
+---
+
+server:
+  port: 8002
+spring:
+  profiles: provider-8002
+
+---
+
+server:
+  port: 8001
+spring:
+  profiles: provider-8001

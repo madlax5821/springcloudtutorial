@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: cloud-gateway
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 123
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # lower case or upper case, default is upper case
+          lower-case-service-id: true
+          # determine if proactively find other services and then register
+          #enabled: true
+      routes:
+        - id: custom-filter-demo
+          uri: lb://user-provider
+          predicates:
+            - Path=/**
+          filters:
+            - name: CustomAddRequestHeader
+              args:
+                name: req-xiaofeifei-header
+                value: req-xiaofeifeizhenshuai
+            - name: CustomAddResponseHeader
+              args:
+                name: resp-xiaofeifei-header
+                value: resp-xiaofeifeiniubi
+            - CheckParameter=password, 123
+
+
+server:
+  port: 6002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,33 @@
+server:
+  port: 7001
+# encryption
+encrypt:
+  # 对称加密
+  key: "xiaofeifei"
+  # 非对称加密
+#  key-store:
+#    location: classpath:/config-server.keystore
+#    alias: config-server
+#    password: 123456
+#    secret: 123456
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/madlax5821/cloud-config
+          search-paths: /**
+          default-label: main
+      enabled: true
+      label: main
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

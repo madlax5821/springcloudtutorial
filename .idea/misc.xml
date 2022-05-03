@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/user-provider-8001/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka-6001/pom.xml" />
+        <option value="$PROJECT_DIR$/user-consumer-9001/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-eureka-ha/pom.xml" />
+        <option value="$PROJECT_DIR$/user-consumer-loadBalancer-9002/pom.xml" />
+        <option value="$PROJECT_DIR$/user-consumer-feign-10110/pom.xml" />
+        <option value="$PROJECT_DIR$/user-consumer-resilience4j-10210/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-config/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-config-client-7002/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-config-ha/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-consul-provider-9998/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-consul-consumer-9997/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-consul-config/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-gateway-6002/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8.0.311" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

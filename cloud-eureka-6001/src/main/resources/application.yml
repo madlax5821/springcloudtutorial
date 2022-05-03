@@ -1,0 +1,27 @@
+server:
+  port: 6001
+spring:
+  application:
+    name: spring-cloud-eureka
+  security:
+    user:
+      name: xiaofeifei
+      password: 123
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+  server:
+    enable-self-preservation: true
+
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

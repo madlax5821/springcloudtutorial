@@ -1,0 +1,29 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: consul-config
+  profiles:
+    active: test
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+        format: yaml
+        data-key: data
+        default-context: application
+
+      discovery:
+        instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        prefer-ip-address: true
+        tags: version=1.0, author=xiaofeifei, email=madlax5821@gmail.com
+  config:
+    import: consul:localhost:8500
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

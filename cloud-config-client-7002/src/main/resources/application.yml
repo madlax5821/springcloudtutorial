@@ -1,0 +1,27 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: config-client
+  config:
+    #import: configserver:http://localhost:7001
+    import: configserver:http://cloud-config
+  cloud:
+    config:
+      # application-{profile name}.yml/properties
+      # application folder/{profile name}.yml/properties
+      profile: dev #-> application-dev.yml/properties
+      label: main
+      discovery:
+        enabled: true
+        service-id: cloud-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

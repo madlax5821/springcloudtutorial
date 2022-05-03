@@ -1,0 +1,17 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: user-consumer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, beans, env, metrics, configprops, heapdump, mappings, flyway

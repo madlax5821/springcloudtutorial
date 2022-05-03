@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/cloud-config-client-7002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consul-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consul-consumer-9997/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consul-provider-9998/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-eureka-6001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-eureka-ha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-gateway-6002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-consumer-9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-consumer-feign-10110/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-consumer-loadBalancer-9002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-consumer-resilience4j-10210/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-provider-8001/src/main/java" charset="UTF-8" />
+  </component>
+</project>

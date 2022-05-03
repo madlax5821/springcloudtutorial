@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud-config/cloud-config.iml" filepath="$PROJECT_DIR$/cloud-config/cloud-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-config-client-7002/cloud-config-client-7002.iml" filepath="$PROJECT_DIR$/cloud-config-client-7002/cloud-config-client-7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-config-ha/cloud-config-ha.iml" filepath="$PROJECT_DIR$/cloud-config-ha/cloud-config-ha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consul-config/cloud-consul-config.iml" filepath="$PROJECT_DIR$/cloud-consul-config/cloud-consul-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consul-consumer-9997/cloud-consul-consumer-9997.iml" filepath="$PROJECT_DIR$/cloud-consul-consumer-9997/cloud-consul-consumer-9997.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consul-provider-9998/cloud-consul-provider-9998.iml" filepath="$PROJECT_DIR$/cloud-consul-provider-9998/cloud-consul-provider-9998.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-6001/cloud-eureka-6001.iml" filepath="$PROJECT_DIR$/cloud-eureka-6001/cloud-eureka-6001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-ha/cloud-eureka-ha.iml" filepath="$PROJECT_DIR$/cloud-eureka-ha/cloud-eureka-ha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-gateway-6002/cloud-gateway-6002.iml" filepath="$PROJECT_DIR$/cloud-gateway-6002/cloud-gateway-6002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-specification.iml" filepath="$PROJECT_DIR$/cloud-specification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-consumer-9001/user-consumer-9001.iml" filepath="$PROJECT_DIR$/user-consumer-9001/user-consumer-9001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-consumer-feign-10110/user-consumer-feign-10110.iml" filepath="$PROJECT_DIR$/user-consumer-feign-10110/user-consumer-feign-10110.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-consumer-loadBalancer-9002/user-consumer-loadBalancer-9002.iml" filepath="$PROJECT_DIR$/user-consumer-loadBalancer-9002/user-consumer-loadBalancer-9002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-consumer-resilience4j-10210/user-consumer-resilience4j-10210.iml" filepath="$PROJECT_DIR$/user-consumer-resilience4j-10210/user-consumer-resilience4j-10210.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-provider-8001/user-provider-8001.iml" filepath="$PROJECT_DIR$/user-provider-8001/user-provider-8001.iml" />
+    </modules>
+  </component>
+</project>

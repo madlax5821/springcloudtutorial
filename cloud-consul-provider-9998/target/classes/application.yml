@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: consul-provider
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      # if spring-consul enabled, default true
+      enabled: true
+      # is service discovery enabled? Default true
+      discovery:
+        enabled: true
+        # register as a service in consul, default true
+        register: true
+        # unique instance id, cannot be repeated, official recommended pattern
+        instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        # present real ip address rather than hostname during registration, default false. recommend true because the WAN Gossip
+        prefer-ip-address: true
+        # use tags when the registration, key-value pair
+        tags: version=1.0, author=xiaofeifei, email=madlax5821@gmail.com
+        # health configuration, essential
+        # server path to invoke health check, default /actuator/health
+        # health-check is an active pattern that monitor or server ask for status from services, versus heartbeat is the
+        # signal which services send to the monitor or server. Active/passive health-check patterns.
+        health-check-path: /actuator/health
+        # frequency of health checking, default 10s
+        health-check-interval: 10s
+        # timeout for health check
+        health-check-timeout: 10s
+        # if verify certificate during health check, default is true.
+        health-check-tls-skip-verify: true
+        heartbeat:
+          enabled: false
+server:
+  port: 9998
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+debug: true

@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: cloud-gateway
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 123
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # lower case or upper case, default is upper case
+          lower-case-service-id: true
+          # determine if proactively find other services and then register
+          #enabled: true
+      routes:
+        # custom predicate strategy
+        - id: custom-predicate
+          uri: lb://user-provider
+          predicates:
+            - Path=/**
+            - name: UsernameCheck
+              args:
+                username: xiaofeifei
+        # rate limit demo with Redis
+        - id: rate-limit-demo
+          uri: lb://user-provider
+          serviceId: user-provider
+          predicates:
+            - Path=/rate/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 2
+                #key-resolver: "#{@pathKeyResolver}"
+                #key-resolver: "#{@ipKeyResolver}"
+                key-resolver: "#{@userKeyResolver}"
+
+server:
+  port: 6002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

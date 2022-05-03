@@ -1,0 +1,37 @@
+server:
+  port: 10210
+
+spring:
+  application:
+    name: user-consumer-resilience4j
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xiaofeifei:123@localhost:6001/eureka/
+feign:
+  circuitbreaker:
+    enabled: true
+  # default connection timeout: 2s
+  httpclient:
+    connection-timeout: 7000
+    ok-http:
+      read-timeout: 60
+
+resilience4j.bulkhead:
+    instances:
+      semaphoreService:
+        maxConcurrentCall: 5
+        maxWaitDuration: 10ms
+resilience4j.thread-pool-bulkhead:
+    instances:
+      threadService:
+        maxWaitDuration: 2000ms
+        maxThreadPoolSize: 5
+        coreThreadPoolSize: 5
+        queueCapacity: 3
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
